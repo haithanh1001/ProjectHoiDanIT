@@ -3,15 +3,16 @@ import connection from '../configs/connectDB';
 let getHomePage = (req,res)=>{
     let data =[]
     connection.execute('SELECT * FROM `users`',(err, results, fields)=>{
-        results.map((row)=>{
+        for (let index = 0; index < results.length; index++) {
+            const element = results[index];
             data.push({
-                id: row.id,
-                firstName: row.firstName,
-                lastName: row.lastName,
-                email: row.email,
-                address: row.address
+                id: element.id,
+                firstName: element.firstName,
+                lastName: element.lastName,
+                email: element.email,
+                address: element.address
             })
-        })
+        }
         return res.render('index', {dataUsers: JSON.stringify(data)});
     })
 }
