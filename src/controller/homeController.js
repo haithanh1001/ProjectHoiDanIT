@@ -13,7 +13,7 @@ let getHomePage = (req,res)=>{
                 address: element.address
             })
         }
-        return res.render('index', {dataUsers: JSON.stringify(data)});
+        return res.render('index', {dataUsers: data});
     })
 }
 
