@@ -10,7 +10,7 @@ const initWebRoute = (app) =>{
         res.send('Toi la bi nguyen');
     })
 
-    
+    router.get('/detail/user/:userId',homeController.getDetailPage);
 
     return app.use('/',router);
 }
