@@ -68,3 +68,16 @@ form {
   margin-top: 15px;
   cursor: pointer;
 }
+
+.upload-file-container {
+  padding: 15px;
+}
+
+.upload-file-container label {
+  display: block;
+}
+
+.upload-file-container form {
+  display: block;
+  margin-bottom: 15px;
+}
